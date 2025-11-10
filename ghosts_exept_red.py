@@ -650,7 +650,7 @@ class  Pac_Man (sprite.Sprite):
             self.image = image.load('assets/pac man 3.png')
             # time.delay(100)
             if self.death_frame <= 10 and now - self.last_death_frame_time >= 100:
-                self.image = image.load(f'death {self.death_frame}.png')
+                self.image = image.load(f'assets/death {self.death_frame}.png')
                 time.delay(100)
                 self.death_frame += 1
                 self.last_death_frame_time = now

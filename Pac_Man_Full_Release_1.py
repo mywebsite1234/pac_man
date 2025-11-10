@@ -1,9 +1,12 @@
+import os
+os.environ['SDL_AUDIODRIVER'] = 'dummy'
+
 from pygame import*
 from random import*
 from math import*
 from ghosts_exept_red import*
 import variables
-def text(message,x,y,font_color,font_size, font_type='font.otf'):
+def text(message,x,y,font_color,font_size, font_type='assets/font.otf'):
         font_type=font.Font(font_type,font_size)
         text=font_type.render(message,True,font_color)
         window.blit (text, (x,y))
