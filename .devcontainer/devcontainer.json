@@ -1,0 +1,18 @@
+{
+  // Use the Python 3.11 image
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+
+  "features": {
+    // This adds the virtual desktop (Fluxbox) and web VNC client (noVNC)
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  },
+
+  "forwardPorts": [
+    // Forwards the web-based VNC viewer
+    6080,
+    // Forwards the raw VNC port
+    5901
+  ],
+
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y python3-sdl2"
+}
